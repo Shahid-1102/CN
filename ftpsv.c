@@ -36,7 +36,7 @@ int main() {
     server_address.sin_port = htons(12345);
     bind(server_socket, (struct sockaddr*)&server_address, sizeof(server_address));
     listen(server_socket, 5);
-    printf("FTP Server listening on port %d...\n", 12345s);
+    printf("FTP Server listening on port %d...\n", 12345);
     while (1) {
         client_socket = accept(server_socket, (struct sockaddr*)&client_address, &client_address_len);
         handle_client(client_socket);
